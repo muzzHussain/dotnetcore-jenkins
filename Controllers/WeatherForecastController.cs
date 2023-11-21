@@ -39,6 +39,7 @@ namespace dotnetCoreApp.Controllers
         [HttpGet] 
         public async Task<IActionResult> Welcome()
         {
+            checking error case
             return StatusCode(200, "Welcome to Weather Forcast DotNet Core Application");
         }
     }
