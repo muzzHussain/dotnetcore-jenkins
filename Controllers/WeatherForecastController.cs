@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace dotnetCoreApp.Controllers
 {
@@ -33,6 +34,12 @@ namespace dotnetCoreApp.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet] 
+        public async Task<IActionResult> Welcome()
+        {
+            return StatusCode(200, "Welcome to Weather Forcast DotNet Core Application");
         }
     }
 }
